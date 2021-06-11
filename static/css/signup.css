@@ -1,0 +1,129 @@
+*
+{
+				box-sizing: border-box;
+}
+body{
+
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    background-image: url("../images/s1.jpg");
+    background-position : center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	object-fit: cover;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+ 
+
+}
+.wrapper
+{
+    margin: 0 auto;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);	
+}
+input[type=text],input[type=email],input[type=password],input[type=date]
+{
+    background: transparent;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    width:60%;
+    color:black;
+}
+label
+{
+    margin-bottom: 5px;
+    color:black;
+}
+input[type=radio]
+{
+    margin-left: 10px;
+    color:black;
+}
+.filter::placeholder
+{
+    margin-bottom: 10px;
+    color:black;
+    opacity: 0.6;
+}
+.filter
+{
+    padding: 6px 0;
+    color:black;
+}
+
+form{
+    margin-left: 60px;
+    margin-top: 82px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.wrapper{
+background-color:rgba(255,255,255,0.6);
+	width:500px;
+	height: 720px;
+	margin: 0 auto;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);	
+	border-radius: 50px;
+	border: 1px solid black;
+}
+.button1
+{
+    
+    margin:auto 90px ;
+    margin-top: 15px;
+    width:150px;
+   
+    
+}
+input[type=submit]
+{
+    border-radius: 50px;
+  
+}
+.text
+{
+    position: absolute;
+    left: 15%;
+    top:10px;
+   
+
+}
+.login
+{
+   position: absolute;
+   width: 30%;
+   bottom: 12px;
+   right: 75px;
+   
+}
+.button1
+{
+    position: absolute;
+    left:-10px;
+    bottom: 12px;
+}
+.session
+{
+ color: green;   
+ position: absolute;
+ font-size: 20px;
+ left: 78px;
+ top:60px;
+}
+.session1
+{
+ color:red;   
+ position: absolute;
+ font-size: 20px;
+ left: 78px;
+ top:60px;
+}

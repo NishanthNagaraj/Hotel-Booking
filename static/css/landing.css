@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+*
+{
+				box-sizing: border-box;
+}
+
+	
+
+body
+{
+				padding: 0;
+				margin: 0;
+				min-height: 100vh;
+				
+				background-color: #f1dfd1;
+				background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+		
+				
+}
+
+.navbar
+{
+				font-family: 'Lato', sans-serif;
+				height:80px;
+}
+.navbar-nav
+{
+	font-size:20px;
+	margin:0 40px;
+	
+}
+.ct 
+{
+	margin-top:-37% ;
+	border: 1px solid white;
+	border-radius:50px;
+	background-color: rgba(0,0,0,0.6);
+	padding: 20px;
+	width:60%;
+	margin-left: 18%;
+
+}
+
+input
+{
+				border: none;
+				background: transparent;
+				border-bottom: 1px solid black;
+}
+.wrap
+{
+		
+			margin:auto 150px;
+			box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.81);
+			-webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.81);
+			-moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.81);
+			 margin-bottom: 20px;
+			 object-fit: cover;
+			 overflow: hidden;
+				
+		
+}	
+.carousel-item
+{
+	height:600px;
+}			
+.about
+{
+	
+	margin:20px 200px;
+	border:1px solid black;
+	border-radius: 50px;
+	padding: 10px;
+	font-family: 'Dancing Script', cursive;
+	
+}
+
+
+.grid 
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: minmax(500px,auto);
+	background-color:#F8F8F8;
+	margin:auto 200px;
+	object-fit: cover;
+	overflow: hidden;
+	
+				
+}
+.image
+{
+				background-image: url(A1.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;    
+				object-fit: cover;			
+}
+.content
+{
+				font-size: 20px;
+				margin-right: 50px;
+				overflow: hidden;
+				text-align: justify;
+				margin-left: 20px;
+				color: black;
+}
+.image1
+{
+				background-image: url(A2.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;    
+				object-fit: cover;
+				
+		
+			
+}
+.image2
+{
+				background-image: url(A3.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;    
+				object-fit: cover;
+}
+.image3
+{
+				background-image: url(A4.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;    
+				object-fit: cover;
+}
+.image4
+{
+				background-image: url(A5.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;    
+				object-fit: cover;
+}
+.content1
+{
+				font-size: 20px;
+				margin-left: 50px;
+				overflow: hidden;
+				text-align: justify;
+				margin-right: 20px;
+				color:black;
+}
+
+.space
+{
+				height: 500px;
+				object-fit: cover;
+				backdrop-filter: blur(3px);
+}
+				
+.head
+{
+				margin-top: -49%;
+				border:1px solid white;
+				width:60%;
+				margin-left: 130px;
+				padding: 20px;
+				background-color: rgba(0,0,0,0.6);
+				border-radius: 50px;
+} 
+/* .dark {
+    background-color: #ff4545;
+} */
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    color: white;
+} 
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+}
+.about
+{
+	background-color: #C9B8A6;
+
+
+}
+.float
+{
+	float:right;
+	font-family: 'Lato', sans-serif;
+}
+.flat
+{
+	float: left;
+	font-family: 'Lato', sans-serif;
+}
+.navbar-brand:hover
+{
+	color: white;
+}
+#logout
+{
+	background: transparent;
+	border: none;
+	color: #9a9c9e;
+	font-size: 20px;
+	outline: none;
+}
+#logout:hover
+{
+	color: whitesmoke;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+    font-family: 'Lato', sans-serif;
+}
+.zoom
+{
+
+	transition: all .5s ease
+	
+}
+.zoom:hover
+{
+	transform: scale(1.05);
+
+}
+.nav-link:hover
+{
+	
+	border-bottom: 1px solid white;
+	transition-duration: 1s;
+	
+}

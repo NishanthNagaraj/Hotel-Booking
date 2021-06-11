@@ -1,0 +1,238 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*
+{
+    box-sizing: border-box;
+   
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color:#FBEAFF;
+    /* background-image: url("../images/book1.jpg");
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+     */
+}
+
+.container
+{
+    position: absolute;
+   margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Lato', sans-serif;
+    color: white;
+    
+ 
+   
+}
+.bg-primary
+{
+    height: 550px;
+    width: 100px;
+    
+}
+.p{
+    
+    font-size: 2.5rem;
+    margin-left: 20px;
+    margin-top: 17px;
+   
+}
+.p1
+{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+.p2,.p3
+{
+    font-size: 22px;
+}
+.line
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 20px;
+}
+.p4
+{
+    font-size: 22px;
+    margin-top: 40px;
+    color: white;
+}
+.style
+{
+    margin-bottom: 60px;
+    color: white;
+}
+.border
+{
+    width: 100%;
+    height: 38px;
+    font-weight: bold;
+    background: transparent;
+    outline: none;
+    border:none;
+    border:2px solid white;
+    text-align: center;
+   color: white;
+    border-radius: 20px;
+
+   
+}
+button
+{
+    width: 100%;
+   
+   
+    
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.primary
+{
+    background-color: 				#181818;
+    border-radius: 20px;
+
+
+}
+.dark
+{
+background-color:		#282828;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+
+    
+
+}
+.primary
+{
+    box-shadow: 1px -1px 10px 2px rgba(0,0,0,0.67);
+
+}
+
+.text-green
+{
+    position: absolute;
+    color: green;
+    top:45%;
+    right:80%;
+}
+.green 
+{
+    position: absolute;
+    color: green;
+  top:45%;
+    right:59.5%;
+}
+.greeny
+{
+    position: absolute;
+    color: green;
+    right: 80%;
+    top:67%;
+}
+.total
+{
+    background-color: #181818;
+    border-radius: 20px;
+    box-shadow: 1px -1px 10px 2px rgba(0,0,0,0.67);
+    height: 500px;
+   
+}
+.details
+{
+    font-size: 2.25rem;
+    margin-left: 18px;
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 62%;
+    
+}
+   
+
+.checkin1
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    /* border-bottom: 1px solid white; */
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom:20px;
+}
+.checkin2
+{
+    
+    background: transparent;
+    outline: none;
+    border: none;
+    /* border-bottom: 1px solid white; */
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    margin-left: 20px;
+}
+.checkin3
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 90px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+ 
+  
+}
+.fa-calendar-week:before {
+    content: "\f784";
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.fa-users:before {
+    content: "\f0c0";
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.fa-calendar-day:before {
+    content: "\f783";
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.fa-rupee-sign:before {
+    content: "\f156";
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.fa-door-open:before {
+    content: "\f52b";
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.fa-utensils:before {
+    content: "\f2e7";
+    margin-left: 8px;
+    margin-right: 8px;
+}

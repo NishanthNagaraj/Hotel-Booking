@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+body
+{
+				padding: 0;
+				margin: 0;
+				min-height: 100vh;	
+}
+*
+{
+				box-sizing: border-box;
+}
+.dropdown-menu
+{
+    overflow: hidden;
+}
+
+.navbar
+{
+	font-family: 'Lato', sans-serif;
+	height:80px;
+				
+}
+.navbar-nav
+{
+	font-size:20px;
+	margin:0 40px;
+	
+}
+body
+{
+    overflow-x: hidden;
+/* overflow:hidden; */
+}
+.head
+{
+    /* position:fixed; */
+    height: 70px;
+    /* width:100%; */
+    background-color: #072e5c;
+    /* background-color: #29324d; */
+    color: white;
+    
+}
+.box
+{
+    padding-top: 20px;
+    text-align: center;
+    border: 1px solid grey;
+    color:white;
+}
+/* .scroll
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+} */
+.beg{
+    overflow:hidden;
+    /* background-color: grey; */
+} 
+img, svg {
+    vertical-align: middle;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.half
+{
+height: 50%;
+}
+.center
+{
+    padding-top: 15px;
+    text-align: center;
+    color: black;
+}
+.colbord
+{
+    border:1px solid grey;
+    border-bottom: 2px solid grey;
+    /* overflow:hidden; */
+}
+.description
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.room_name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.dance
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color:crimson;
+}
+.pb
+{
+    border-bottom: 1px solid grey;
+}
+.b-align
+{
+padding-top: 39.5px;
+
+}
+.bc
+{
+    background-color: #e5ddd2;
+} 
+.orange
+{
+	color: rgb(255, 196, 0);
+}
+#logout
+{
+	background: transparent;
+	border: none;
+	color: #9a9c9e;
+	font-size: 20px;
+	outline: none;
+}
+#logout:hover
+{
+	color: whitesmoke;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+option
+{
+    color: black;
+}
+input[type=date]
+{
+    margin-right: 15px;
+}
+span
+{
+    margin-right: 5px;
+}
+form
+{
+    width: 100%;
+}
+.pos
+{
+    overflow: hidden;
+}
+.zoom
+{
+
+	transition: all .5s ease
+	
+}
+.zoom:hover
+{
+	transform: scale(1.05);
+
+}
+.nav-link:hover
+{
+	
+	border-bottom: 1px solid white;
+	transition-duration: 1s;
+	
+}

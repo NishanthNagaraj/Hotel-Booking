@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*
+{
+    box-sizing: border-box;
+}
+#logout
+{
+	background: transparent;
+	border: none;
+	color: #9a9c9e;
+	font-size: 20px;
+	outline: none;
+}
+#logout:hover
+{
+	color: whitesmoke;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width:auto 550px;
+
+}
+.container
+{
+    margin: 0 auto;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); 
+    font-family: 'Lato', sans-serif;
+  
+}
+.top
+{
+    border: 1px solid grey;
+    margin-bottom: 50px;
+    background-color:	#181818;
+    box-shadow: 1px -1px 10px 2px rgba(0,0,0,0.67);
+    
+}
+.left
+{
+    border: 1px solid grey;
+    height: 400px;
+    width: 100px;
+    background-color:	#181818;
+    box-shadow: 1px -1px 10px 2px rgba(0,0,0,0.67);
+
+}
+.right
+{
+    border: 1px solid grey;
+    height: 400px;
+    width: 100px;
+    background-color:	#181818;
+    box-shadow: 1px -1px 10px 2px rgba(0,0,0,0.67);
+    
+}
+.one 
+{
+    margin-bottom: 15px;
+}
+.two
+{
+    margin-bottom: 15px;
+}
+input[type=text]
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-top: -5px;
+    font-size: 23px;
+}
+
+
+form
+{
+    margin-top: -80px;
+}
+.bottom
+{
+    margin-bottom: 30px;
+    
+    
+}
+.h31
+{
+    margin-left: -35px;
+    margin-top: 70px;
+}
+.h33
+{
+    margin-left: -35px;
+}
+.h32
+{
+    margin-right: 15px;
+}
+.p3{
+    margin-left: -179px;
+    font-size: 26px;
+}
+.p1
+{
+    margin-left: -120px;
+    font-size: 26px;
+    margin-top: 5px;
+}
+.p2
+{
+    margin-left: -120px;
+    font-size: 26px;
+}
+.block
+{
+    height: 65px;
+    background-color: 	#282828;
+    width:104.6%;
+    margin-left: -12px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.edit
+{
+    margin-top: 14px;
+    font-size: 25px;
+    margin-left: 8px;
+  
+
+}
+.get
+{
+    margin-top: 10px;
+    width: 80%;
+   
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    font-size: 18px;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    margin-top: 8px;
+    width: 80%;
+    font-size: 20px;
+}
+.bord
+{
+    border-radius: 25px;
+}
+.edit {
+    margin-top: 15px;
+    font-size: 24px;
+    margin-left: 8px;
+    font-weight: 490;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    margin-top: 11px;
+    border-radius: 50px;
+}
+.nav-link:hover
+{
+	
+	border-bottom: 1px solid white;
+	transition-duration: 1s;
+	
+}
+.navbar
+{
+	font-family: 'Lato', sans-serif;
+	height:80px;
+}
+.navbar-nav
+{
+	font-size:20px;
+	margin:0 40px;
+	
+}
+.container
+{
+    margin-top: 40px;
+    
+}
+.length
+{
+    height: 250px;
+    border-radius: 20px;
+}
+.bg
+{
+    background-color: #282828;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+    
+}
+.change
+{
+    margin-top: 10px;
+    font-size: 22px;
+    float: right;
+}
+.fa-pencil-alt
+{
+    color: white;
+    background: none;
+}
+.fa-pencil-alt:before {
+    content: "\f303";
+    float: left;
+    margin-right: 950px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.l1 {
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.l2
+{
+    display: inline-block;
+    float: left;
+    margin-top: 18px;
+    font-size: 22px;
+}
+.inp
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-top: -5px;
+   
+    width: 90%;
+    margin-right: 30px;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+.pass
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+   
+   margin-top: 7.6px;
+    width: 90%;
+    margin-right: 30px;
+  
+    margin-bottom: 15px;
+}
+
+
+/* input[type=text] {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-top: -5px;
+    font-size: 15px;
+    width: 90%;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+
+/* <form action="">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="">Current Passowrd</label>
+                <input type="text" readonly>
+              </div>
+              <div class="col-md-6">
+                <label for="">New Passowrd</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="button" class="btn btn-success">Success</button>
+              </div>
+            </div>
+
+           </form> */

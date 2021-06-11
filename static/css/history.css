@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.navbar-brand:hover
+{
+	color: white;
+}
+.nav-link:hover
+{
+	
+	border-bottom: 1px solid white;
+	transition-duration: 1s;
+	
+}
+
+table
+{
+    margin-top: 20px;
+}
+#logout
+{
+	background: transparent;
+	border: none;
+	color: #9a9c9e;
+	font-size: 20px;
+	outline: none;
+}
+#logout:hover
+{
+	color: whitesmoke;
+}
+.navbar
+{
+				font-family: 'Lato', sans-serif;
+				height:80px;
+}
+.navbar-nav
+{
+	font-size:20px;
+	margin:0 40px;
+	
+}
