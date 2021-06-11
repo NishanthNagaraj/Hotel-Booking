@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="../static/css/profile.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Profile.css')}}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- <script src="../static/js/dashboard.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>Hello, world!</title>
+    <script>
+      function handler1() 
+      {
+          $(".form,.h3").hide();
+          $("h3").show();
+          $("button").one("click", handler2);
+      }
+      function handler2() {
+      $(".form,.h3").show();
+      $("h3").hide();
+      $("button").one("click", handler1);
+      }
+      $(document).ready(handler1)
+  </script>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand animate__animated  animate__bounceInLeft" href="#">HOTEL <i class="fas fa-hotel"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link animate__animated  animate__fadeInUp" aria-current="page" href="{{url_for('landing')}}">Home</a>
+            <a class="nav-link  animate__animated  animate__fadeInUp" href="{{url_for('room_selection')}}">Rooms</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{{url_for('profile')}}">Edit profile</a></li>
+                <li><a class="dropdown-item" href="{{url_for('history')}}">Booking history</a></li>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-nav">
+      <a class="nav-link float-right animate__animated  animate__bounceInRight" href="{{url_for('logout')}}">Logout</a>
+      <!-- {{ url_for('login') }} -->
+    </div>
+      </nav>
+  <div class="container">
+<!-- <div class="row">
+  <div class="col-md-12 top p-5 text-white text-center down">
+    <h5>orem ipsum dolor sit, amet consectetur adipisicing elit. Magni, facilis accusantium! Tenetur fugiat aliquam debitis qui consectetur, eum explicabo, vero inventore dolore repellendus voluptatem incidunt ipsum repellat quas labore modi libero sed illum architecto? Quo hic et ipsa ab, rem explicabo aliquid natus itaque! Vel rerum nesciunt eius ullam. Ducimus.</h5>
+  </div>
+</div>     -->
+
+ 
+
+<div class="row">
+
+  <div class="col-md-5 left text-white text-center bord">
+    <div class="block">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <p class="edit">Edit details <i class="fas fa-user-cog"></i></p>
+      </div>
+      <div class="col-md-4 text-center">
+        <button type="submit" class="get btn btn-danger">Edit</button>
+      </div>
+      <div class="col-md-4 text-center">
+        <input form="show" class="h3 btn btn-success save" type="submit"></input>
+      </div>
+    </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-md-12 bottom">
+        <h3 class="h31">Username <i class="fas fa-user"></i> :  {{session['username']}}</h3>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-md-12 bottom">
+
+          <h3 class="h32">Email <i class="fas fa-envelope-open-text"></i> : {{session['email']}}</h3>
+        </div>
+      </div>
+     <div class="row">
+       <div class="col-md-12 bottom">
+        <h3 class="h33">Phone no <i class="fas fa-phone"></i> : {{session['phone']}}</h3>
+       </div>
+     </div>
+      
+      
+     <form class="form" action="{{url_for('edit')}}" id="show" method="POST">
+        <div class="row">
+          <div class="col-md-12  one">
+            <p class="p1">Full name <i class="fas fa-user"></i></p>
+            <input name="username" id="username" type="text" value="{{session['username']}}">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 two">
+            <p class="p2">Phone no <i class="fas fa-phone"></i></p>
+            <input name="phone" id="phone" type="text" value="{{session['phone']}}">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 three">
+            <p class="p3">Email <i class="fas fa-envelope-open-text"></i></p>
+            <input name="email" id="email" type="text" value="{{session['email']}}">
+          </div>
+        </div>
+       
+       
+     
+  </form>
+  </div>
+  <div class="col-md-2">
+
+  </div>
+  <div class="col-md-5 right text-white text-center length">
+    <div class="row bg">
+      <div class="col-md-6 text-center ">
+        <p class="change"> Change password</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <p>
+          <a class="icon float-left" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fas fa-pencil-alt"></i></a>
+        </p>
+      </div>
+    </div>
+   
+    
+    <div class="row">
+      <div class="col">
+        
+        <div class="collapse multi-collapse text-black" id="multiCollapseExample1">
+          
+          <div class="text-white">
+            <form id="pwd" action="{{url_for('password')}}" method="POST">
+            <div class="row">
+              <div class="col-md-6">
+                
+                <label class="l1" for="">Current Password</label>
+                <input class="inp" name="current_password" type="password" value="{{session['password']}}" required>
+              </div>
+              <div class="col-md-6">
+                <label class="l2" for="">New Password</label>
+                <input class="pass" name="new_password" type="password" required>
+              </div>
+            <!-- Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger. -->
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input form="pwd" type="submit" class="btn btn-success update">
+            </form>
+            </div>
+          </div>
+       
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+  <!-- <body>
+    <div>
+        <table>
+        <tr>
+            <th>Date & time</th>
+            <th>Booking Id</th>
+            <th>Room</th>
+            <th>Check in</th>
+            <th>Check out</th>
+            <th>No of Guests</th>
+            <th>Total_price</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+        <td>{{row.9}}</td>
+        <td>{{row.0}}</td>
+        <td>{{row.3}}</td>
+        <td>{{row.4}}</td>
+        <td>{{row.5}}</td>
+        <td>{{row.7}}</td>
+        <td>{{row.8}}</td>
+    </tr>
+    {% endfor %}
+        </table>
+    </div>
+<div>
+    <h1>Edit details</h1>
+    <button type="submit" id="get">Edit</button>
+    <h3>{{session['username']}}</h3>
+    <h3>{{session['phone']}}</h3>
+    <h3>{{session['email']}}</h3>
+<form action="{{url_for('edit')}}" id="show" method="POST">
+      <label for="">Full name</label>
+      <input name="username" type="text" value="{{session['username']}}">
+      <label for="">Phone No</label>
+      <input name="phone" type="text" value="{{session['phone']}}">
+      <label for="">Email</label>
+      <input name="email" type="text" value="{{session['email']}}">
+      <input type="submit">
+</form>
+</div>
+</body> -->
+ <script src="{{url_for('static',filename='js/landing.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>

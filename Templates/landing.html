@@ -1,0 +1,192 @@
+<!doctype html> <html lang="en"> <head> <!-- Required meta tags --> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{{url_for('static',filename='parallax.js-1.5.0/parallax.js')}}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{url_for('static',filename='css/landing.css')}}">
+<!-- <link rel="stylesheet" href="landing (1).css"> -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> <title>Hello, world!</title> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head> 
+<body>
+				
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand animate__animated  animate__bounceInLeft" href="#">HOTEL <i class="fas fa-hotel"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active  animate__animated  animate__fadeInUp" aria-current="page" href="{{url_for('landing')}}">Home</a>
+          <a class="nav-link  animate__animated  animate__fadeInUp" href="{{url_for('room_selection')}}">Rooms</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{url_for('profile')}}">Edit profile</a></li>
+              <li><a class="dropdown-item" href="{{url_for('history')}}">Booking history</a></li>
+            </ul>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-nav">
+    <a class="nav-link float-right animate__animated  animate__bounceInRight" href=""><form action="{{url_for('login')}}" method="POST" autocomplete="off"><button id="logout"type="submit">Logout</button></form></a>
+    <!-- {{ url_for('login') }} -->
+  </div>
+    </nav>
+<div class="wrap">
+	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="{{url_for('static',filename='images/H1.jpg')}}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+			  <h1 class="ct">Welcome to our Hotel</h1>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="{{url_for('static',filename='images/l2.jpg')}}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h1 class="ct">Welcome to our Hotel</h1>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="{{url_for('static',filename='images/H5.jpg')}}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h1 class="ct">Welcome to our Hotel</h1>
+			</div>
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+  </div>
+  <div class="space" data-parallax="scroll" data-image-src="{{url_for('static',filename='images/P1.jpg')}}"> </div>
+
+    <h1 class="about">About Us</h1>
+	<div class="abt">		
+				<div class="grid">
+								<div class="content ">THE BEACH BAY HOTEL
+                  SERVICES SINCE 2010
+                  Carrying forward a glorious legacy of elegance & hospitality since the Beginning.
+                  From land to sea, The Beach Bay Hotel is luxuries abound. Focus on life’s simple pleasures with serene spa experiences or discover the allure of our underwater majesties. 
+From deep sea diving and snorkeling or sailing, to basking in the Marina sunshine - your ultimate indian escape is exactly as you wish.
+
+
+                  </div>
+								<div class="image shadow-sm p-3 mb-5 bg-body rounded zoom"></div>
+				</div>
+				
+				<div class="grid">
+								
+								<div class="image1 shadow-sm p-3 mb-5 bg-body rounded zoom"></div>
+								<div class="content1">Natural light draws you in to a space so calm, so divine, you can hear its heartbeat. Simplicity and sophistication fuse with ultra-modern amenities to create a memorable living experience. An air of understated elegance pervades these contemporarily designed rooms with its soothing colour palette that encourages relaxation. Crawl in, curl up and let room service take care of the rest.</div>
+				</div>
+				
+				
+					<div class="grid">
+								<div class="content">Glorious views of the crystal-clear waters of the Bay of Bengal Ocean come as standard in all of our five-star hotels and luxury villas. Alongside stunning seaside locations, effortlessly elegant interiors and impeccable service – including the assistance of our knowledgeable concierges – you can look forward to a stylish selection of destination bars and restaurants, luxury spas and boutiques</div>
+								<div class="image2 shadow-sm p-3 mb-5 bg-body rounded zoom"></div>
+				</div>
+						
+						<div class="grid">
+								
+								<div class="image3 shadow-sm p-3 mb-5 bg-body rounded zoom"></div>
+								<div class="content1">Home to some of the most sought-after restaurants in the world, The River Front Hotel stimulates your palate with an array of delights. The world’s finest chefs prepare the most imaginative culinary traditions from across the world. Place yourself at the cusp of an exquisite culinary adventure when you visit The Beach Bay Hotel.</div>
+				</div>
+				
+				
+				<div class="grid">
+								<div class="content">Awaken your inner self with our award winning, all-natural spas rooted in traditional Indian well-being and spirituality. We offer a milieu of old India therapies and beauty secrets to foster harmony and equilibrium within you. These time-tested wellness rituals are now within reach inside the soothing sanctuaries of every Spa.</div>
+								<div class="image4 shadow-sm p-3 mb-5 bg-body rounded zoom"></div>
+				</div>
+			</div>	
+			<div class="space top" data-parallax="scroll" data-image-src="{{url_for('static',filename='images/P2.jpg')}}"> </div>
+				
+		<footer class="text-center text-white bg-dark " style="background-color: #f1f1f1;">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"></i></a>
+
+      <!-- Google -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright:
+    <a class="text-white" href="#">Hotel.com</a>
+	<p class="float"><i class="fas fa-phone-volume text-white"></i> 9476704532</p>
+	<p class="flat">Hotel@gmail.com</p>
+  </div>
+  <!-- Copyright -->
+</footer>
+<script src="{{url_for('static',filename='js/landing.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/confirmation.css')}}">
+    <!-- <link rel="stylesheet" href="../static/css/confirmation.css"> -->
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+        
+     <div class="container">
+      
+      <div class="row ">
+        
+
+        <div class="col-md-5 primary text-black">
+
+          <div class="row">
+            <div class="col dark" style="height: 100px;">
+              <p class="p"><i class="fas fa-long-arrow-alt-right"></i> Your Details <i class="fas fa-info-circle"></i></p>
+            </div>
+          </div>
+          <p class="p1">We will use these details to share the booking information</p>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="p2">Username <i class="fas fa-user"></i></p>
+            </div>
+            <div class="col-md-6">
+              <p class="p3">Email id <i class="fas fa-envelope-open-text"></i></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              
+              <input class="w-100 p-1 line" value="{{session['username']}} " readonly ><i class="fas fa-check-circle text-green"></i>
+            </div>
+            <div class="col-md-6">
+
+
+              <input  class="w-100 p-1 line" value="{{session['email']}}" readonly><i class="fas fa-check-circle green"></i>
+            </div>
+              
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-6">
+                <p class="p4">Phone no <i class="fas fa-phone"></i></p>
+              </div>
+              <div class="col-md-6">
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 style">
+                <input class="w-100 p-1 line" value="{{session['phone']}}" readonly><i class="fas fa-check-circle greeny"></i>
+              </div>
+          
+              <div class="col-md-6 style">
+  
+  
+              
+              </div>
+                
+              </div>
+              <div class="row style">
+
+                <div class="col-md-6">
+                  <!-- <p class="p5 W-100 text-center  border">Pay RS.{{session['total_price']}}/-</p> -->
+                  <input class="border border-white" value="Pay RS.{{session['total_price']}}/-" readonly>
+                </div>
+                <div class="col-md-6">
+                  <a href="{{url_for('payment')}}"><button type="submit" class="btn btn-success"> Pay now</button></a>
+                </div>
+              </div>
+          </div>
+
+
+
+
+
+            
+       
+
+
+      
+      
+      
+      
+        <div class="col-md-2">
+        
+      </div>
+
+
+
+
+
+
+
+
+        <div class="col-md-5 total">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="details text-white p-2">Booking details <i class="fas fa-chevron-down"></i></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+           
+            <p class="checkin1"> Check in : <i class="fas fa-calendar-week"> </i> {{ session['checkin']}} </p>
+         
+          
+
+        
+   
+      </div>
+
+
+     </div>
+     <div class="row">
+      <div class="col">
+       
+        <p class="checkin1"> Check out : <i class="fas fa-calendar-week"></i> {{session['checkout']}} </p>
+     
+      
+
+    
+
+  </div>
+
+
+ </div>
+
+ <div class="row">
+  <div class="col">
+   
+    <p class="checkin1">  Guests : <i class="fas fa-users"></i> {{session['guests']}} </p>
+ 
+  
+
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="row">
+  <div class="col">
+   
+    <p class="checkin1">  No of days : <i class="fas fa-calendar-day"></i> {{session['days']}} </p>
+ 
+  
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="row">
+  <div class="col">
+   
+    <p class="checkin1"> Price per night : <i class="fas fa-rupee-sign"></i> {{session['price']}} </p>
+ 
+  
+
+
+
+</div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-md-12 width">
+   
+    <p class="checkin1">Room type : <i class="fas fa-door-open"></i> {{session['room_name']}} </p>
+ 
+  
+
+
+
+</div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+   
+    <p class="checkin1">breakfast : <i class="fas fa-utensils"></i> {{session['breakfast']}} </p>
+ 
+  
+
+
+
+</div>
+
+
+</div>
+<div class="row">
+  <div class="col-md-6">
+   
+    <p class="checkin2">Total price : </p>
+ </div>
+
+ <div class="col-md-6 border1">
+   
+  <p class="checkin3 p-1"><i class="fas fa-rupee-sign"></i> {{session['total_price']}}</p>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
